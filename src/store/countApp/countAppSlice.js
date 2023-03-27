@@ -7,18 +7,9 @@ export const countAppSlice = createSlice({
         expenseList: [],
         incomeList:[],
         activeMovement: null,
-        
-        // totalExpense:0,
-        // totalIncome:0,
-        // total:0,
     }, 
     
     reducers: {
-
-        // setTotal: (state ) => {
-        //     state.total = state.totalIncome - state.totalExpense
-        // },
-
         /* añadir */
         addNewExpense: (state, { payload } ) => {
             state.expenseList.push(payload);
@@ -38,12 +29,10 @@ export const countAppSlice = createSlice({
         /* crear array */
         setExpenseList: (state, { payload } ) => {
             state.expenseList = payload;
-            // state.totalExpense = state.expenseList?.map(e => parseInt(e.amount)).reduce((a, c)=> a + c);
         },
         
         setIncomeList: (state, { payload } ) => {
             state.incomeList = payload;
-            // state.totalIncome = state.incomeList?.map(i => parseInt(i.amount)).reduce((a, c)=> a + c);
         },
 
           /* borrar */
@@ -87,14 +76,8 @@ export const countAppSlice = createSlice({
             state.isSaving = true;
         },
        
-        clearNotesLogout: (state)=>{
-            state.isSaving = false;
-            state.expenseList = [];
-            state.active = null;
-        },
-
     }
 });
 
-export const { /* setTotal ,*/ addNewExpense, addNewIncome, setActiveMovement, setExpenseList, setIncomeList,  deleteExpenseById, deleteIncomeById, updateIncome, updateExpense, savingNewNote, clearNotesLogout, setSaving } = countAppSlice.actions;
+export const { addNewExpense, addNewIncome, setActiveMovement, setExpenseList, setIncomeList,  deleteExpenseById, deleteIncomeById, updateIncome, updateExpense, savingNewNote, clearNotesLogout, setSaving } = countAppSlice.actions;
 

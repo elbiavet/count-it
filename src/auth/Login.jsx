@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { checkingAuthentication, startGoogleSignIn, startLoginWithEmail } from '../store/auth/thunks'
 import { useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import '../auth/Login.css'
 
 const formData = {
     email: "",
@@ -27,7 +26,6 @@ export const Login = () => {
     const onGoogleSignIn = ()=>{
         dispatch(checkingAuthentication());
         dispatch(startGoogleSignIn())
-        
     }
 
     //bandera para deshabilitar botones mientras se está autenticando el usuario
