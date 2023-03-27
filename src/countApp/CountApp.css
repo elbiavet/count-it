@@ -1,0 +1,18 @@
+
+.fondo-selected{
+    background-color: whitesmoke;
+}
+
+.icons-react{
+    font-size: 5rem;
+}
+
+.btn-hover :hover{
+    color: rgb(244, 33, 33);
+    font-size: 1.1em;
+}
+
+.link-inicio{
+    max-width:18rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
