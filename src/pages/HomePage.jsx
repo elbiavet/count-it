@@ -13,7 +13,7 @@ export const HomePage = () => {
 
             <div className="col-5 col-lg-3 col-xl-4 d-flex m-1 m-sm-2 justify-content-center border border-primary link-inicio">
               <div className="text-center p-4 m-1 m-sm-2">
-                <Link to="/mymoney" className="text-decoration-none">
+                <Link to="/resumen" className="text-decoration-none">
                   <div>
                     <FcComboChart className="icons-react"/>
                     <p className="fs-4">Mi dinero</p>

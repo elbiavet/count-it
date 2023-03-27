@@ -43,7 +43,7 @@ export const ChartMoney = () => {
     });
   
   return (
-    <div className="d-md-flex">
+    <div className="d-md-flex justify-content-center">
       <DoughnutChart chartData={ arrayExpenses } text="Gastos"/>
       <DoughnutChart chartData={ arrayIncomes } text="Ingresos"/>
     </div>

@@ -51,7 +51,7 @@ export const NavBar = () => {
             </li>
             <li className="nav-item fs-5 col-1 col-sm-2 col-lg-1" >
                 <NavLink to="/search" className={({isActive}) =>`d-none d-sm-block nav-link ${isActive ? "active" : "" }`} aria-current="page">Buscar</NavLink>
-                <NavLink to="/home" className={({isActive}) => `d-sm-none fs-3 nav-link ${isActive ? "active" : "" }`} aria-current="page"><VscSearch /></NavLink>
+                <NavLink to="/search" className={({isActive}) => `d-sm-none fs-3 nav-link ${isActive ? "active" : "" }`} aria-current="page"><VscSearch /></NavLink>
             </li>
         </ul>
       </div>

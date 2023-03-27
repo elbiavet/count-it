@@ -15,7 +15,8 @@ export const startTotalIncome=()=>{
         const docs = await getDocs( collectionRef )
         
         const docsIncome = [0]; //evita el error por tener array vacío
-        docs.forEach(doc => {docsIncome.push(parseInt(doc.data().amount))})
+        docs.forEach(doc => {docsIncome.push(parseFloat(doc.data().amount))})
+        // docs.forEach(doc => {docsIncome.push(doc.data().amount).toFixed(2)})
         
         const totalIncome = docsIncome.reduce((a, c)=> a + c) 
         
@@ -33,7 +34,10 @@ export const startTotalExpense=()=>{
         const docs = await getDocs( collectionRef )
         
         const docsExpense = [0]; //evita el error por tener array vacío
-        docs.forEach(doc => {docsExpense.push(parseInt(doc.data().amount))})
+        
+        docs.forEach(doc => {docsExpense.push(parseFloat(doc.data().amount))})
+        // docs.forEach(doc => {docsExpense.push(doc.data().amount).toFixed(2)})
+        
         const totalExpense = docsExpense.reduce((a, c)=> a + c)
        
         dispatch(setTotalExpense(totalExpense))
