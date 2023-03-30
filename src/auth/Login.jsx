@@ -77,6 +77,7 @@ export const Login = () => {
                 
                 <p className="text-center mt-4 fs-5">¿No estás registrado? <Link to="/register">Hazlo aquí.</Link></p>
             </form>
+            <footer><p className="text-center">&copy; Elbia Losana - Proyecto de Gestor Gastos</p></footer>
         </div>
     </div>
   )

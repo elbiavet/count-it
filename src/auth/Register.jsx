@@ -87,6 +87,7 @@ export const Register = () => {
                     
                     <p className="text-center mt-4 fs-5">¿Ya estás registrado? <Link to="/login">Ingresar</Link></p>
                 </form>
+                <footer><p className="text-center">&copy; Elbia Losana - Proyecto de Gestor Gastos</p></footer>
             </div>
         </div>
       )
