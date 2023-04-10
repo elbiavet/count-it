@@ -1,8 +1,8 @@
-import { useForm } from 'react-hook-form'
-import { useDispatch, useSelector } from 'react-redux'
-import { checkingAuthentication, startGoogleSignIn, startLoginWithEmail } from '../store/auth/thunks'
 import { useMemo } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { checkingAuthentication, startGoogleSignIn, startLoginWithEmail } from '../store/auth/thunks'
 
 const formData = {
     email: "",
@@ -33,15 +33,15 @@ export const Login = () => {
     
 
     return (
-    <div className="container-fluid vh-100 row d-flex align-items-center justify-content-center">
-        <div className="container-login col-11 col-sm-9 col-md-8 col-lg-6 col-xl-5 border border-primary border-2 rounded p-4 animate__animated animate__fadeIn">
+    <div className="container-fluid vh-100 row d-flex align-items-center justify-content-center fondo-auth">
+        <div className="container-login col-11 col-sm-9 col-md-8 col-lg-6 col-xl-5 border border-primary border-2 rounded p-4 animate__animated animate__fadeIn bg-light">
             <div className="bg-primary mb-4">
                 <p className="text-light text-center display-5 p-3">Count it!</p>
             </div>
             <form onSubmit={ handleSubmit(onSubmit) }>
                 <h2 className="text-center text-primary">Login</h2>
                 <div className="mb-3">
-                    <label htmlFor="staticEmail" className="col-sm-2 col-form-label fs-5 fw-bold text-primary">Email</label>
+                    <label htmlFor="staticEmail" className="col-sm-2 col-form-label fs-6 fw-bold text-primary">Email</label>
                     <input 
                         type="text" 
                         className="form-control border border-primary" 
@@ -56,7 +56,7 @@ export const Login = () => {
                 </div>
 
                 <div className="mb-5">
-                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label fs-5 fw-bold text-primary">Contraseña</label>
+                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label fs-6 fw-bold text-primary">Contraseña</label>
                     <input 
                         type="password" 
                         className="form-control border border-primary" 
@@ -71,11 +71,11 @@ export const Login = () => {
                 { !!errorMessage ? <p className="text-danger fw-bold"><i className="bi bi-exclamation-triangle m-2 fs-5"></i>{ errorMessage }</p> : ""}
 
                 <div className="gap-3 d-flex justify-content-center m-4">
-                    <button type="submit" className="btn btn-primary col-4 fs-5" disabled= { isAuthenticating }>Enviar</button>
-                    <button type="submit" className="btn btn-primary col-4 fs-5" disabled= { isAuthenticating } onClick={ onGoogleSignIn }><i className="bi bi-google m-2"></i>Google</button>
+                    <button type="submit" className="btn btn-primary col-6 col-md-4 fs-5" disabled= { isAuthenticating }>Enviar</button>
+                    <button type="submit" className="btn btn-primary col-6 col-md-4 fs-5" disabled= { isAuthenticating } onClick={ onGoogleSignIn }><i className="bi bi-google m-2"></i>Google</button>
                 </div>
                 
-                <p className="text-center mt-4 fs-5">¿No estás registrado? <Link to="/register">Hazlo aquí.</Link></p>
+                <p className="text-center mt-4 fs-6">¿No estás registrado? <Link to="/register">Hazlo aquí.</Link></p>
             </form>
             <footer><p className="text-center">&copy; Elbia Losana - Proyecto de Gestor Gastos</p></footer>
         </div>

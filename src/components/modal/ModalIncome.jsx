@@ -120,7 +120,7 @@ export const ModalIncome = () => {
                 
             </div>
             <div className="mb-3">
-                <label htmlFor="incomeCategory" className="col-form-label">Tipo de gasto</label>
+                <label htmlFor="incomeCategory" className="col-form-label">Tipo de ingreso</label>
                 <select className="form-select" aria-label="incomeCategory" name="category" onChange= {onInputChange} required > 
                     <option value="">Elige uno</option>  
                     <option value="Nómina">Nómina</option>
